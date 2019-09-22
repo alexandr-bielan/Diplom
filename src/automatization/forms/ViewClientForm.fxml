@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="1001.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automatization.controllers.ViewClientController">
+    <children>
+        <Label layoutX="60.0" layoutY="196.0" prefHeight="30.0" prefWidth="142.0" text="Паспорт">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="passportColumn" layoutX="146.0" layoutY="199.0" />
+
+        <Label layoutX="320.0" layoutY="196.0" prefHeight="30.0" prefWidth="94.0" text="Кем выдан">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="passvidachaColumn" layoutX="413.0" layoutY="199.0" />
+        <Label layoutX="591.0" layoutY="237.0" prefHeight="30.0" prefWidth="142.0" text="E-mail">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="addressColumn" layoutX="145.0" layoutY="239.0" />
+        <Label layoutX="60.0" layoutY="108.0" prefHeight="30.0" prefWidth="170.0" text="ID клиента">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="idColumn" layoutX="237.0" layoutY="111.0" prefHeight="25.0" prefWidth="62.0" />
+        <Label layoutX="591.0" layoutY="197.0" prefHeight="30.0" prefWidth="142.0" text="Телефон">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="phoneColumn" layoutX="730.0" layoutY="200.0" />
+        <Label layoutX="60.0" layoutY="236.0" prefHeight="30.0" prefWidth="142.0" text="Адрес">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="emailColumn" layoutX="730.0" layoutY="239.0" />
+        <Label layoutX="320.0" layoutY="236.0" prefHeight="30.0" prefWidth="68.0" text="Город">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+
+        </Label>
+        <TextField fx:id="cityColumn" layoutX="413.0" layoutY="239.0" />
+        <Button fx:id="button" layoutX="720.0" layoutY="387.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="170.0" text="ОК" />
+
+        <Label layoutX="595.0" layoutY="151.0" prefHeight="30.0" prefWidth="142.0" text="Дата рождения">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="birthdateColumn" layoutX="730.0" layoutY="154.0" />
+        <Box layoutX="167.0" layoutY="88.0" />
+        <Box layoutX="113.0" layoutY="87.0" />
+        <Box layoutX="168.0" layoutY="90.0" />
+        <TextField fx:id="loginColumn" layoutX="413.0" layoutY="154.0" />
+        <Label layoutX="336.0" layoutY="154.0" prefHeight="30.0" prefWidth="62.0" text="Имя">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="surnameColumn" layoutX="145.0" layoutY="156.0" />
+        <Label layoutX="60.0" layoutY="151.0" prefHeight="30.0" prefWidth="142.0" text="Фамилия">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <Box layoutX="124.0" layoutY="78.0" />
+        <Label layoutX="53.0" layoutY="47.0" prefHeight="30.0" prefWidth="603.0" text="Данные клиента">
+            <font>
+                <Font name="Verdana" size="24.0" />
+            </font>
+        </Label>
+        <Separator layoutX="56.0" layoutY="88.0" prefHeight="2.0" prefWidth="846.0" />
+
+      <Separator layoutX="56.0" layoutY="334.0" prefHeight="2.0" prefWidth="846.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#a0adb9" height="129.0" layoutX="53.0" layoutY="151.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="855.0" />
+
+    </children>
+</AnchorPane>

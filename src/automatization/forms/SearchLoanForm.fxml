@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="928.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automatization.controllers.SearchLoanController">
+    <children>
+        <Label layoutX="60.0" layoutY="108.0" prefHeight="30.0" prefWidth="209.0" text="Введите номер договора">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="idColumn" layoutX="290.0" layoutY="107.0" prefHeight="25.0" prefWidth="149.0" />
+        <Box layoutX="167.0" layoutY="88.0" />
+        <Box layoutX="113.0" layoutY="87.0" />
+        <Box layoutX="168.0" layoutY="90.0" />
+        <TextField fx:id="surnameColumn" layoutX="290.0" layoutY="150.0" />
+        <Label layoutX="60.0" layoutY="151.0" prefHeight="30.0" prefWidth="142.0" text="Фамилия">
+            <font>
+                <Font name="Verdana" size="16.0" />
+            </font>
+        </Label>
+        <Box layoutX="124.0" layoutY="78.0" />
+        <Label layoutX="53.0" layoutY="47.0" prefHeight="30.0" prefWidth="603.0" text="Поиск кредита">
+            <font>
+                <Font name="Verdana" size="24.0" />
+            </font>
+        </Label>
+        <Separator layoutX="56.0" layoutY="88.0" prefHeight="2.0" prefWidth="846.0" />
+      <Button fx:id="button1" layoutX="296.0" layoutY="201.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Оk" />
+
+      <Separator layoutX="56.0" layoutY="334.0" prefHeight="2.0" prefWidth="846.0" />
+
+    </children>
+</AnchorPane>

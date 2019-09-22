@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="automatization.controllers.CreditProgramController">
+    <children>
+        <!-- Таблица в которую мы будем выводит наш pojo -->
+        <TableView fx:id="tableUsers" layoutX="37.0" layoutY="170.0" prefHeight="216.0" prefWidth="850.0">
+            <columns>
+                <!-- Колонки таблицы -->
+                <TableColumn fx:id="idColumn" prefWidth="80.0" text="№" />
+                <TableColumn fx:id="loginColumn" prefWidth="100.0" text="Тип кредита" />
+                <TableColumn fx:id="surnameColumn" prefWidth="120.0" text="Продолжительность" />
+                <TableColumn fx:id="birthdateColumn" prefWidth="120.0" text=" Процент годовых" />
+                <TableColumn fx:id="passportColumn" prefWidth="180.0" text="Минимальный размер кредита" />
+                <TableColumn fx:id="passVidachaColumn" prefWidth="180.0" text="Максимальный размер кредита " />
+                <TableColumn fx:id="emailColumn" prefWidth="100.0" text="Комиссия" />
+
+
+
+            </columns>
+        </TableView>
+        <Label layoutX="14.0" layoutY="18.0" text="Кредитные программы">
+            <font>
+                <Font name="Verdana" size="24.0" />
+            </font>
+        </Label>
+      <TextField fx:id="idColumn1" layoutX="339.0" layoutY="62.0" prefHeight="25.0" prefWidth="137.0" text="18" />
+      <Label layoutX="48.0" layoutY="59.0" prefHeight="30.0" prefWidth="278.0" text="Минимальный возраст заемщика">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="102.0" prefHeight="30.0" prefWidth="284.0" text="Максимальный возраст заемщика">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idColumn11" layoutX="339.0" layoutY="105.0" prefHeight="25.0" prefWidth="137.0" text="65" />
+    </children>
+</AnchorPane>

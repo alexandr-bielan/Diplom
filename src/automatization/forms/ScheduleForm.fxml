@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automatization.controllers.ScheduleController">
+    <children>
+        <!-- Таблица в которую мы будем выводит наш pojo -->
+        <TableView fx:id="tableUsers" layoutX="185.0" layoutY="62.0" prefHeight="461.0" prefWidth="677.0">
+            <columns>
+                <!-- Колонки таблицы -->
+                <TableColumn fx:id="idColumn" prefWidth="80.0" text="№" />
+                <TableColumn fx:id="loginColumn" prefWidth="180.0" text="Сумма выплаты" />
+                <TableColumn fx:id="birthdateColumn" prefWidth="217.0" text="Дата выплаты" />
+                <TableColumn fx:id="control" prefWidth="207.0" text="Отметка об оплате" />
+            </columns>
+        </TableView>
+        <Label layoutX="14.0" layoutY="18.0" text="График платежей по кредиту">
+            <font>
+                <Font name="Verdana" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
