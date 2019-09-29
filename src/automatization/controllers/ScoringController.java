@@ -14,12 +14,12 @@ import java.text.DateFormat;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 
+import automatization.services.ConnectionBase;
 import automatization.Main;
 
-public class ScoringController extends  Main {
+public class ScoringController extends ConnectionBase  {
 
-    public  static Connection c = null;
-    public   static Statement stmt = null;
+
 //Переменные Text Field
     @FXML
     private Button button;
@@ -104,10 +104,8 @@ public class ScoringController extends  Main {
     private String sum;
     private String credittype;
     private String dateCredit;
-    private String date1;
     private String sql1;
     private int term;
-    private int bank;
     private int b;
     private int temp1;
     private int average1;
@@ -120,7 +118,7 @@ public class ScoringController extends  Main {
     DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     // инициализируем форму данными
     @FXML
-    public void initialize() throws SQLException, ClassNotFoundException,ConnectException {
+    public void initialize() throws SQLException, ClassNotFoundException {
         initData();
     }
 
@@ -128,30 +126,19 @@ public class ScoringController extends  Main {
       private void initData() throws SQLException, ClassNotFoundException {
 
             //Открываем доступ в базу данных
-          Class.forName("org.postgresql.Driver");
-          c = DriverManager.getConnection("jdbc:postgresql://localhost:5433/postgres", "postgres", "2034489f");
-          c.setAutoCommit(false);
-          System.out.println("Opened database successfully");
-          stmt = c.createStatement();
+          createConnection();
 
-          //Вводим номер заявки
+            //Вводим номер заявки
           button1.setOnAction(e->{
               text1 = idColumn.getText();
               id = Integer.parseInt(text1);
               System.out.println(id);
               String sql = "INSERT INTO dipl (new_column)"  +  "VALUES ("+id+")";
 
-              try {
-                  stmt.executeUpdate(sql);
-                  stmt.close();
-                  c.commit();
-              }
-              catch (SQLException t) {
-                  System.err.println(t.getClass().getName()+": "+t.getMessage());
+              closeConnection(sql);
 
-                   System.exit(0);
-              }
-               openNewWindow("/automatization/forms/ScoringForm.fxml");
+
+               //openNewWindow("/automatization/forms/ScoringForm.fxml");
               Stage stage = (Stage) button1.getScene().getWindow();
               stage.close();
           });
@@ -275,28 +262,10 @@ public class ScoringController extends  Main {
 
                     sql1 = "INSERT INTO grafic_payment (graficpayment_id, graficpayment_sum, graficpayment_date, credit_id) \n"
                             +   "VALUES (" + i+",'"+(temp1*(1+2*creditpercent*0.01)/18)+"','"+dataCred2+"','"+number+"')";
-                    try {
-                        stmt.executeUpdate(sql1);
-                        c.commit();
-                    }
-                    catch (SQLException e) {
-                        System.err.println(e.getClass().getName()+": "+e.getMessage());
-                    }
+                    closeConnection(sql1);
                 }
 
-                // System.out.println ("You have entered a client_Passporty " + surname);
-                try {
 
-                    stmt.executeUpdate(sql);
-
-                    stmt.close();
-                    c.commit();
-                }
-                catch (SQLException e) {
-                    System.err.println(e.getClass().getName()+": "+e.getMessage());
-
-                    //System.exit(1);
-                }
                 Stage stage = (Stage) button.getScene().getWindow();
 
             }

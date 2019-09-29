@@ -21,9 +21,10 @@ import java.net.URL;
 import java.io.IOException;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
+import automatization.services.OpenNewWindow;
 
 public class Main extends Application  {
-
+    OpenNewWindow x = new OpenNewWindow();
     @Override
     public void start(Stage primaryStage)    {
         BorderPane root1 = new BorderPane();
@@ -58,25 +59,25 @@ public class Main extends Application  {
         newMenuItem1.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/NewCreditForm.fxml");
+                x.openNewWindow("forms/NewCreditForm.fxml");
             }
         });
         saveMenuItem1.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/CreditBaseForm.fxml");
+                x.openNewWindow("forms/CreditBaseForm.fxml");
             }
         });
         newMenuItem4.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/SearchLoanForm.fxml");
+                x.openNewWindow("forms/SearchLoanForm.fxml");
             }
         });
         creditProgramMenuItem.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/CreditProgramForm.fxml");
+                x.openNewWindow("forms/CreditProgramForm.fxml");
             }
         });
 
@@ -88,14 +89,14 @@ public class Main extends Application  {
         newMenuItem3.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/NewClientForm.fxml");
+                x.openNewWindow("forms/NewClientForm.fxml");
             }
         });
         MenuItem searchClient = new MenuItem("Поиск клиента");
         searchClient.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/SearchClientForm.fxml");
+                x.openNewWindow("forms/SearchClientForm.fxml");
             }
         });
 
@@ -103,7 +104,7 @@ public class Main extends Application  {
         oracleItem.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("/automatization/forms/ClientBaseForm.fxml");
+                x.openNewWindow("/automatization/forms/ClientBaseForm.fxml");
             }
         });
 
@@ -115,21 +116,21 @@ public class Main extends Application  {
         newMenuItem5.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/ScoringForm.fxml");
+                x.openNewWindow("forms/ScoringForm.fxml");
             }
         });
         MenuItem newMenuItem6 = new MenuItem("Расчет ежемесячного платежа");
         newMenuItem6.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/SearchScheduleForm.fxml");
+                x.openNewWindow("forms/SearchScheduleForm.fxml");
             }
         });
         MenuItem newMenuItem7 = new MenuItem("Выбор банка");
         newMenuItem7.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/BankBaseForm.fxml");
+                x.openNewWindow("forms/BankBaseForm.fxml");
             }
         });
         scoringMenu.getItems().addAll(newMenuItem5, newMenuItem6, newMenuItem7);
@@ -167,7 +168,7 @@ public class Main extends Application  {
         btnCenter.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/CreditProgramForm.fxml");
+                x.openNewWindow("forms/CreditProgramForm.fxml");
             }
         });
         btnCenter.setPadding(new Insets( 5, 35,  5, 35));
@@ -192,7 +193,7 @@ public class Main extends Application  {
         btnRight.setOnAction(new EventHandler<ActionEvent>()  {
             @Override
             public void handle(ActionEvent t) {
-                openNewWindow("forms/SearchLoanForm.fxml");
+                x.openNewWindow("forms/SearchLoanForm.fxml");
             }
         });
         btnRight.setPadding(new Insets(5, 55, 5, 55));
@@ -207,27 +208,7 @@ public class Main extends Application  {
         primaryStage.show();
     }
 
-    public void openNewWindow(String FXMLFile) {
-        //ChildNode child;
-        try {
-            URL url = getClass().getResource(FXMLFile);
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(url);
-            fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
-            Pane root =   fxmlLoader.load(url.openStream());
 
-            Stage stage = new Stage();
-
-            stage.getIcons().add(new Image("automatization/img/icon.png"));
-            Scene scene = new Scene(root, 900, 550);
-
-            stage.setScene(scene);
-            stage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     public static void main(String[] args) {
         launch(args);
     }

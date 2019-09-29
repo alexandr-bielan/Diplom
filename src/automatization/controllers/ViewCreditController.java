@@ -1,5 +1,6 @@
 package automatization.controllers;
 
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,9 +21,10 @@ import java.net.ConnectException;
 import java.net.URL;
 import java.sql.*;
 
+import automatization.services.OpenNewWindow;
 
 public class ViewCreditController extends Main {
-
+    OpenNewWindow x = new OpenNewWindow();
     public  static Connection c = null;
     public   static Statement stmt = null;
 
@@ -202,7 +204,7 @@ public class ViewCreditController extends Main {
             public void handle(ActionEvent t) {
                 Stage stage = (Stage) button.getScene().getWindow();
                 stage.close();
-                openNewWindow("schedule/scheduleSample.fxml");
+                x.openNewWindow("schedule/scheduleSample.fxml");
             }
         });
     }

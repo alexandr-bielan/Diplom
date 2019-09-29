@@ -17,9 +17,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 
+import  automatization.services.OpenNewWindow;
 
 public class NewClientController extends Main {
-
+    OpenNewWindow x = new OpenNewWindow();
     public  static Connection c = null;
     public   static Statement stmt = null;
 
@@ -111,7 +112,7 @@ public class NewClientController extends Main {
            }
                 Stage stage = (Stage) button.getScene().getWindow();
                 stage.close();
-                openNewWindow("/automatization/forms/NewClientForm.fxml");
+                x.openNewWindow("/automatization/forms/NewClientForm.fxml");
 
             }
         });
